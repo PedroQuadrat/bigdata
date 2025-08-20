@@ -1,6 +1,6 @@
 botar pip install -r .\requirements.txt
 
-
+copiar o dialog helper do exemplo 5 e colar em DialogHelper.py
 
 
 isso no main_bot.py
