@@ -1,9 +1,15 @@
+botar pip install -r .\requirements.txt
+
+
+
+
+isso no main_bot.py
 #mudar classe para mainbot
 # em message factory usar uma f string f""
 
 
 #import botbuilder.dialogs import Dialog
-#def __init__(self,
+def __init__(self,
 #             dialog: Dialog
 #              conversation_state: ConversationState,
 #              user_state: UserState
