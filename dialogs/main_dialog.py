@@ -20,7 +20,8 @@ class MainDialog(ComponentDialog):
             WaterfallDialog(
                 "MainDialog",
                 [
-                    self.prompt_option_step
+                    self.prompt_option_step,
+                    self.process_option_step
                 ]
             )
         )
@@ -40,3 +41,19 @@ class MainDialog(ComponentDialog):
                 ]
             )
         )
+    
+    async def process_option_step(self, step_context: WaterfallStepContext):
+        option = step_context.result.value
+
+        if (option == "Cadastrar Evento"):
+            return await step_context.context.send_activities(
+                MessageFactory.text(f"Voce escolheu")
+            )
+        elif (option == "Consultar Evento"):
+            return await step_context.context.send_activities(
+                MessageFactory.text(f"Voce escolheu 2")
+            )
+        elif (option == "Ajuda"):
+            return await step_context.context.send_activities(
+                MessageFactory.text(f"Voce escolheu ajuda")
+            )
